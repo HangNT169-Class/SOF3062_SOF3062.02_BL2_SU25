@@ -24,7 +24,7 @@ public class ProductController {
     }
     @DeleteMapping("/delete/{id1}")
     public ResponseObject<?> delete(@PathVariable("id1") String id) {
-        proService.delete(id);
+        proService.deleteByMa(id);
         return new ResponseObject<>(null, "Xoa product thanh cong");
     }
 
