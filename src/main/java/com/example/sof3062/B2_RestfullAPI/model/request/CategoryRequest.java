@@ -11,9 +11,9 @@ public class CategoryRequest {
     private Integer id;
 
     @NotBlank(message = "Code k duoc de trong")
-    private String code1;
+    private String categoryCode;
 
     @NotBlank(message = "Name k duoc de trong")
-    private String name;
+    private String categoryName;
 
 }

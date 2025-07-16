@@ -1,15 +1,20 @@
 package com.example.sof3062.B2_RestfullAPI.util;
 import org.modelmapper.ModelMapper;
+import org.modelmapper.config.Configuration;
+import org.modelmapper.convention.MatchingStrategies;
 
 public class MapperUtils {
-    // MAPPING REQUEST => ENTITY
     private static final ModelMapper modelMapper = new ModelMapper();
 
-    /**
-     * Map generic từ source sang class target mới
-     */
-    public static <S, T> T map(S source, Class<T> targetClass) {
-        return modelMapper.map(source, targetClass);
+    static {
+        modelMapper.getConfiguration()
+                .setMatchingStrategy(MatchingStrategies.STRICT)
+                .setFieldMatchingEnabled(true)
+                .setFieldAccessLevel(Configuration.AccessLevel.PRIVATE);
+    }
+
+    public static <S, D> D map(S source, Class<D> destinationType) {
+        return modelMapper.map(source, destinationType);
     }
 
     /**
@@ -17,5 +22,9 @@ public class MapperUtils {
      */
     public static <S, T> void mapToExisting(S source, T target) {
         modelMapper.map(source, target);
+    }
+
+    public static ModelMapper getModelMapper() {
+        return modelMapper;
     }
 }
