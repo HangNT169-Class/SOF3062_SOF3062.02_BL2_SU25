@@ -10,9 +10,9 @@ public class ProductResponse {
     // du lieu tra ra
     private Long id;
 
-    private String pCode;
+    private String productCode;
 
-    private String pName;
+    private String productName;
 
     private Double price;
 
@@ -22,8 +22,8 @@ public class ProductResponse {
 
     public ProductResponse(Product p) {
         this.id = p.getId();
-        this.pCode = p.getProductCode();
-        this.pName = p.getProductName();
+        this.productCode = p.getProductCode();
+        this.productName = p.getProductName();
         this.price = p.getPrice();
         this.categoryCode = p.getCate().getCategoryCode();
         this.categoryName = p.getCate().getCategoryName();

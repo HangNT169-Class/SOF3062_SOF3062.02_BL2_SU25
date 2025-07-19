@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/product")
+@CrossOrigin(origins = "*") // Cho phép gọi từ frontend (Vue)
 public class ProductController {
 
     @Autowired
