@@ -20,6 +20,8 @@ public class ProductResponse {
 
     private String categoryName;
 
+    private Integer categoryId;
+
     public ProductResponse(Product p) {
         this.id = p.getId();
         this.productCode = p.getProductCode();
@@ -27,6 +29,7 @@ public class ProductResponse {
         this.price = p.getPrice();
         this.categoryCode = p.getCate().getCategoryCode();
         this.categoryName = p.getCate().getCategoryName();
+        this.categoryId = p.getCate().getId();
     }
 
 }
