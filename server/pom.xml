@@ -11,8 +11,8 @@
     <groupId>com.example</groupId>
     <artifactId>sof3062</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>SOF3062_SOF3062.02_BL2_SU25</name>
-    <description>SOF3062_SOF3062.02_BL2_SU25</description>
+    <name>server</name>
+    <description>server</description>
     <url/>
     <licenses>
         <license/>
